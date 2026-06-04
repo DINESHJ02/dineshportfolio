@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Dinesh J — Web Developer & WooCommerce Specialist. 4+ live stores. Chennai, India."/>
+  <title>Dinesh J — Web Developer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%230a2463'/><text y='.9em' x='50%' text-anchor='middle' font-size='48' font-family='Georgia,serif' fill='white' font-style='italic'>DJ</text></svg>"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- ══ LOADER ══ -->
+  <div id="loader">
+    <div class="ld-inner">
+      <div class="ld-ring"></div>
+      <span>DJ</span>
+    </div>
+  </div>
+
+  <!-- ══ PROGRESS ══ -->
+  <div id="progress"></div>
+
+  <!-- ════════════════════════════════
+       NAV
+  ════════════════════════════════ -->
+  <header id="nav">
+    <div class="nav-wrap">
+      <a href="#home" class="brand">
+        <div class="brand-mark">DJ</div>
+        <span>Dinesh J</span>
+      </a>
+
+      <nav class="desk-nav">
+        <a href="#home"       class="ln">Home</a>
+        <a href="#about"      class="ln">About</a>
+        <a href="#skills"     class="ln">Skills</a>
+        <a href="#work"       class="ln">Work</a>
+        <a href="#contact"    class="ln cta-ln">Contact</a>
+      </nav>
+
+      <button id="hbg" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="drawer">
+    <div class="drawer-head">
+      <a href="#home" class="brand brand--dark">
+        <div class="brand-mark brand-mark--dark">DJ</div>
+        <span>Dinesh J</span>
+      </a>
+      <button id="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="mob-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="drawer-socials">
+      <a href="https://github.com/DINESHJ02"               target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/dinesh-j-b9bbba2a6" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="mailto:dineshjayapriya5@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </div>
+  <div id="overlay"></div>
+
+  <!-- ════════════════════════════════
+       HERO — circular photo, centred
+  ════════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+
+      <!-- Profile photo — WhatsApp / Instagram DP style -->
+      <div class="profile-wrap reveal">
+        <div class="profile-ring"></div>
+        <div class="profile-photo">
+          <!-- Replace src with your real photo -->
+          <img
+            src="InShot_20250915_070813004.jpg.jpeg"
+            alt="Dinesh J"
+          />
+        </div>
+        <span class="status-dot"></span>
+      </div>
+
+      <!-- Name + role -->
+      <div class="hero-text reveal" style="--d:.1s">
+        <p class="hero-hey">Hi, I'm</p>
+        <h1 class="hero-name">Dinesh J</h1>
+        <p class="hero-role">
+          <span id="typed"></span><span class="cur">|</span>
+        </p>
+        <p class="hero-bio">
+          Web Developer based in Chennai — specialising in WordPress &amp; WooCommerce. I build fast, clean, conversion-ready stores for real businesses.
+        </p>
+      </div>
+
+      <!-- Quick stats row -->
+      <div class="hero-stats reveal" style="--d:.2s">
+        <div class="hs-item">
+          <strong class="cnt" data-t="4">0</strong>
+          <span>Live Sites</span>
+        </div>
+        <div class="hs-div"></div>
+        <div class="hs-item">
+          <strong class="cnt" data-t="20">0</strong>
+          <span>PageSpeed pts+</span>
+        </div>
+        <div class="hs-div"></div>
+        <div class="hs-item">
+          <strong class="cnt" data-t="1">0</strong>
+          <span>Year Exp</span>
+        </div>
+        <div class="hs-div"></div>
+        <div class="hs-item">
+          <strong class="cnt" data-t="30">0</strong>
+          <span>% Faster Dev</span>
+        </div>
+      </div>
+
+      <!-- CTA buttons -->
+      <div class="hero-cta reveal" style="--d:.28s">
+        <a href="#work"    class="btn-solid">View My Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+
+      <!-- Social row -->
+      <div class="hero-socials reveal" style="--d:.34s">
+        <a href="https://github.com/DINESHJ02"               target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/dinesh-j-b9bbba2a6" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:dineshjayapriya5@gmail.com"          aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+917339270572"                          aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+      </div>
+
+    </div>
+
+    <!-- Scroll cue -->
+    <a href="#about" class="scroll-cue reveal" style="--d:.4s">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ════════════════════════════════
+       ABOUT
+  ════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+
+      <div class="sec-label reveal">About Me</div>
+      <h2 class="sec-title reveal" style="--d:.05s">Who I Am</h2>
+
+      <div class="about-layout">
+        <div class="about-copy reveal" style="--d:.1s">
+          <p>I'm a 22-year-old web developer finishing my B.IT at Jaya Engineering College, Chennai. Over the past year I worked as a Web Developer Intern at <strong>Thinkbright Web Solutions</strong> — building and shipping real WooCommerce stores for business clients from day one.</p>
+          <p>My strength is the full WordPress &amp; WooCommerce stack: custom themes, plugin development, Razorpay/PayU payment integrations, SEO foundations, and performance tuning. I care about results — not just code that works, but sites that are fast, ranked, and convert.</p>
+          <p>Outside work I explore Android development, REST APIs, and modern frontend patterns.</p>
+
+          <a href="Dinesh_J_Resume_(2)-1778956898008 (1).pdf" class="btn-solid btn-solid--sm" id="dl-cv">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="about-card reveal" style="--d:.15s">
+          <div class="ac-row"><span>Name</span><span>Dinesh J</span></div>
+          <div class="ac-row"><span>Role</span><span>Web Developer</span></div>
+          <div class="ac-row"><span>Exp</span><span>1 year (intern)</span></div>
+          <div class="ac-row"><span>Location</span><span>Chennai, India</span></div>
+          <div class="ac-row"><span>Phone</span><a href="tel:+917339270572">+91 733 927 0572</a></div>
+          <div class="ac-row"><span>Email</span><a href="mailto:dineshjayapriya5@gmail.com">dineshjayapriya5@gmail.com</a></div>
+          <div class="ac-row"><span>GitHub</span><a href="https://github.com/DINESHJ02" target="_blank" rel="noopener">DINESHJ02</a></div>
+          <div class="ac-row no-border"><span>LinkedIn</span><a href="https://linkedin.com/in/dinesh-j-b9bbba2a6" target="_blank" rel="noopener">dinesh-j-b9bbba2a6</a></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       SKILLS
+  ════════════════════════════════ -->
+  <section id="skills" class="section section--navy">
+    <div class="container">
+
+      <div class="sec-label sec-label--light reveal">Skills</div>
+      <h2 class="sec-title sec-title--light reveal" style="--d:.05s">What I Work With</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-box reveal" style="--d:.05s">
+          <div class="sb-icon"><i class="fa-brands fa-wordpress"></i></div>
+          <h3>WordPress &amp; WooCommerce</h3>
+          <p>Custom theme development, plugin creation, store setup, payment gateways (Razorpay, PayU), and order management.</p>
+          <div class="sb-bar"><div class="sb-fill" data-w="95"></div></div>
+        </div>
+
+        <div class="skill-box reveal" style="--d:.1s">
+          <div class="sb-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Frontend</h3>
+          <p>HTML5, CSS3, JavaScript (ES6+), responsive design, cross-browser compatibility, and performance-focused markup.</p>
+          <div class="sb-bar"><div class="sb-fill" data-w="90"></div></div>
+        </div>
+
+        <div class="skill-box reveal" style="--d:.15s">
+          <div class="sb-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h3>SEO &amp; Performance</h3>
+          <p>On-page SEO, schema markup, Core Web Vitals optimisation, PageSpeed audits — 20+ point improvements per site.</p>
+          <div class="sb-bar"><div class="sb-fill" data-w="88"></div></div>
+        </div>
+
+        <div class="skill-box reveal" style="--d:.2s">
+          <div class="sb-icon"><i class="fa-brands fa-php"></i></div>
+          <h3>PHP &amp; MySQL</h3>
+          <p>Server-side scripting, custom WordPress hooks and filters, database design, and REST API integrations.</p>
+          <div class="sb-bar"><div class="sb-fill" data-w="75"></div></div>
+        </div>
+
+        <div class="skill-box reveal" style="--d:.25s">
+          <div class="sb-icon"><i class="fa-brands fa-git-alt"></i></div>
+          <h3>Tools</h3>
+          <p>Git, GitHub, VS Code, Postman, Google Analytics, Google Search Console — standard dev workflow.</p>
+          <div class="sb-bar"><div class="sb-fill" data-w="85"></div></div>
+        </div>
+
+        <div class="skill-box reveal" style="--d:.3s">
+          <div class="sb-icon"><i class="fa-brands fa-android"></i></div>
+          <h3>Android / Other</h3>
+          <p>Kotlin, Firebase, ML integration (final-year project: DarkShield — theft detection system).</p>
+          <div class="sb-bar"><div class="sb-fill" data-w="60"></div></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       EXPERIENCE  (timeline-style inline)
+  ════════════════════════════════ -->
+  <section id="experience" class="section">
+    <div class="container">
+
+      <div class="sec-label reveal">Experience</div>
+      <h2 class="sec-title reveal" style="--d:.05s">Where I've Worked</h2>
+
+      <div class="exp-card reveal" style="--d:.1s">
+        <div class="exp-top">
+          <div class="exp-logo">TW</div>
+          <div class="exp-title">
+            <h3>Wordpress Developer</h3>
+            <p>Thinkbright Web Solutions &nbsp;·&nbsp; Tiruttani</p>
+          </div>
+          <span class="exp-date">Jun 2025 – May 2026</span>
+        </div>
+
+        <div class="exp-metrics">
+          <div class="em-item">
+            <strong>4+</strong><span>WooCommerce stores launched</span>
+          </div>
+          <div class="em-item">
+            <strong>20+</strong><span>PageSpeed pts improved</span>
+          </div>
+          <div class="em-item">
+            <strong>30%</strong><span>Faster dev turnaround</span>
+          </div>
+        </div>
+
+        <ul class="exp-list">
+          <li>Built and launched <strong>4+ production WooCommerce stores</strong> for real clients — all meeting deadlines and achieving client approval.</li>
+          <li>Integrated <strong>Razorpay &amp; PayU</strong> with SSL-compliant checkout flows, reducing payment failures.</li>
+          <li>Developed custom WordPress plugins and themes, cutting dev turnaround by <strong>~30%</strong>.</li>
+          <li>Executed on-page SEO strategies — meta tags, schema markup, URL structures — boosting Google visibility.</li>
+          <li>Achieved <strong>20+ point PageSpeed improvements</strong> per site through image optimisation and script management.</li>
+        </ul>
+
+        <div class="exp-tags">
+          <span>WordPress</span><span>WooCommerce</span><span>PHP</span>
+          <span>MySQL</span><span>Razorpay</span><span>PayU</span>
+          <span>SEO</span><span>JavaScript</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       WORK / PROJECTS
+  ════════════════════════════════ -->
+  <section id="work" class="section section--off">
+    <div class="container">
+
+      <div class="sec-label reveal">Projects</div>
+      <h2 class="sec-title reveal" style="--d:.05s">Selected Work</h2>
+      <p class="sec-sub reveal" style="--d:.1s">Live websites built and shipped during my internship — real clients, real traffic.</p>
+
+      <!-- Filter -->
+      <div class="filters reveal" style="--d:.12s">
+        <button class="f-btn active" data-f="all">All</button>
+        <button class="f-btn" data-f="ecom">E-Commerce</button>
+        <button class="f-btn" data-f="app">App</button>
+      </div>
+
+      <!-- Projects -->
+      <div class="proj-grid" id="proj-grid">
+
+        <!-- P1 -->
+        <div class="proj-item reveal" style="--d:.15s" data-cat="ecom">
+          <div class="pi-img">
+            <div class="slider" id="s3">
+              <div class="sl active"><img src="Screenshot 2026-06-03 202159.png" alt="Kyubi"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 202232.png" alt="Mobile"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 202435.png" alt="Collections"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 202532.png" alt="Checkout"/></div>
+            </div>
+            <button class="sarr sarr-l" onclick="mv('s3',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="sarr sarr-r" onclick="mv('s3', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="sdots" id="d-s3"></div>
+            <span class="pi-live-badge">Live</span>
+          </div>
+          <div class="pi-body">
+            <div class="pi-meta">
+              <span class="pi-cat">E-Commerce</span>
+              <div class="pi-links">
+                <a href="https://kyubifashions.in" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/DINESHJ02" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="pi-title">Kyubi Fashions</h3>
+            <p class="pi-url">kyubifashions.in</p>
+            <p class="pi-desc">Mobile-first fashion store — restructured layouts improved usability scores and significantly reduced bounce rate.</p>
+            <div class="pi-stack"><span>WordPress</span><span>WooCommerce</span><span>Mobile-First CSS</span></div>
+          </div>
+        </div>
+
+        <!-- P2 -->
+        <div class="proj-item reveal" style="--d:.2s" data-cat="ecom">
+          <div class="pi-img">
+            <div class="slider" id="s4">
+              <div class="sl active"><img src="Screenshot 2026-06-03 203107.png" alt="Thinkbright"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 203151.png" alt="Books"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 203252.png" alt="SEO"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 203312.png" alt="Cart"/></div>
+            </div>
+            <button class="sarr sarr-l" onclick="mv('s4',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="sarr sarr-r" onclick="mv('s4', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="sdots" id="d-s4"></div>
+            <span class="pi-live-badge">Live</span>
+          </div>
+          <div class="pi-body">
+            <div class="pi-meta">
+              <span class="pi-cat">E-Commerce</span>
+              <div class="pi-links">
+                <a href="https://thinkbrightpublications.com" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/DINESHJ02" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="pi-title">Thinkbright Publications</h3>
+            <p class="pi-url">thinkbrightpublications.com</p>
+            <p class="pi-desc">SEO-optimised bookstore with breadcrumb navigation — improved Google Search rankings for key titles.</p>
+            <div class="pi-stack"><span>WordPress</span><span>WooCommerce</span><span>PHP</span><span>SEO</span></div>
+          </div>
+        </div>
+
+         <!-- P3 — featured (full width) -->
+        <div class="proj-item proj-item--feat reveal" style="--d:.14s" data-cat="ecom">
+          <div class="pi-img">
+            <div class="slider" id="s1">
+              <div class="sl active"><img src="Screenshot 2026-06-03 203702.png" alt="Homepage"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 203931.png" alt="Catalog"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 204015.png" alt="Cart"/></div>
+              <div class="sl"><img src="Screenshot 2026-06-03 204201.png" alt="Mobile"/></div>
+            </div>
+            <button class="sarr sarr-l" onclick="mv('s1',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="sarr sarr-r" onclick="mv('s1', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="sdots" id="d-s1"></div>
+            <span class="pi-live-badge">Live</span>
+          </div>
+          <div class="pi-body">
+            <div class="pi-meta">
+              <span class="pi-cat">E-Commerce · WordPress</span>
+              <div class="pi-links">
+                <a href="https://aktbuy.in" target="_blank" rel="noopener" title="Visit site"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/DINESHJ02" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="pi-title">Arul Kumaran Tex</h3>
+            <p class="pi-url">aktbuy.in</p>
+            <p class="pi-desc">Complete online textile store with dynamic product catalog, cart, and secure checkout serving live customers daily. Improved page load speed by <strong>40%</strong> through lazy loading and image compression — significantly reducing bounce rate on mobile.</p>
+            <div class="pi-stack">
+              <span>WordPress</span><span>WooCommerce</span><span>PHP</span><span>MySQL</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- P4 -->
+        <div class="proj-item reveal" style="--d:.1s" data-cat="ecom">
+          <div class="pi-img">
+            <div class="slider" id="s2">
+              <div class="sl active"><img src="Screenshot 2026-06-03 204650.png" alt="SS Qube"/></div>
+              <div class="sl"><img src="WhatsApp Image 2026-06-03 at 8.48.57 PM.jpeg" alt="Filtering"/></div>
+              <div class="sl"><img src="WhatsApp Image 2026-06-03 at 8.48.58 PM (1).jpeg" alt="Variants"/></div>
+              <div class="sl"><img src="WhatsApp Image 2026-06-03 at 8.48.58 PM.jpeg" alt="Analytics"/></div>
+            </div>
+            <button class="sarr sarr-l" onclick="mv('s2',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="sarr sarr-r" onclick="mv('s2', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="sdots" id="d-s2"></div>
+            <span class="pi-live-badge">Live</span>
+          </div>
+          <div class="pi-body">
+            <div class="pi-meta">
+              <span class="pi-cat">E-Commerce</span>
+              <div class="pi-links">
+                <a href="https://ssqube.in" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/DINESHJ02" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="pi-title">SS Qube Outfit</h3>
+            <p class="pi-url">ssqube.in</p>
+            <p class="pi-desc">Fashion platform with advanced product filtering, size variants, and a Google Analytics-powered conversion funnel for data-driven UI decisions.</p>
+            <div class="pi-stack"><span>WordPress</span><span>WooCommerce</span><span>Google Analytics</span></div>
+          </div>
+        </div>
+
+        <!-- P5 -->
+        <div class="proj-item reveal" style="--d:.25s" data-cat="app">
+          <div class="pi-img">
+            <div class="slider" id="s5">
+              <div class="sl active"><img src="IMG_20260603_210020.jpg.jpeg" alt="DarkShield"/></div>
+              <div class="sl"><img src="IMG_20260603_205953.jpg.jpeg" alt="Intruder"/></div>
+              <div class="sl"><img src="IMG_20260603_205935.jpg.jpeg" alt="GPS"/></div>
+              <div class="sl"><img src="IMG_20260603_205907.jpg.jpeg" alt="SIM"/></div>
+            </div>
+            <button class="sarr sarr-l" onclick="mv('s5',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="sarr sarr-r" onclick="mv('s5', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="sdots" id="d-s5"></div>
+            <span class="pi-badge-dark">Final Year Project</span>
+          </div>
+          <div class="pi-body">
+            <div class="pi-meta">
+              \<span class="pi-cat">Android App</span>
+              <div class="pi-links">
+                <a href="https://github.com/DINESHJ02" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="pi-title">DarkShield</h3>
+            <p class="pi-url">Mobile Theft Detection System</p>
+            <p class="pi-desc">Android app that captures intruder selfies on failed unlocks and sends real-time GPS alerts via Email &amp; SMS. Includes SIM-swap detection and ML anomaly detection.</p>
+            <div class="pi-stack"><span>Android</span><span>Kotlin</span><span>Firebase</span><span>Machine Learning</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       EDUCATION
+  ════════════════════════════════ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="sec-label reveal">Education</div>
+      <h2 class="sec-title reveal" style="--d:.05s">Academic Background</h2>
+
+      <div class="edu-row">
+        <div class="edu-card reveal" style="--d:.1s">
+          <div class="edu-ic"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="edu-info">
+            <span class="edu-yr">2022 — 2026</span>
+            <h3>Bachelor of Information Technology</h3>
+            <p>Jaya Engineering College, Chennai</p>
+            <div class="edu-chips">
+              <span>Web Development</span><span>Databases</span><span>Software Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal" style="--d:.15s">
+          <div class="edu-ic"><i class="fa-solid fa-certificate"></i></div>
+          <div class="edu-info">
+            <span class="edu-yr">Self-directed</span>
+            <h3>Certifications &amp; Training</h3>
+            <p>Online learning — ongoing</p>
+            <ul class="edu-certs">
+              <li><i class="fa-solid fa-check"></i> WordPress &amp; WooCommerce (Udemy, official docs)</li>
+              <li><i class="fa-solid fa-check"></i> Performance &amp; Core Web Vitals (Google Web.dev)</li>
+              <li><i class="fa-solid fa-check"></i> SEO &amp; Google Analytics (Google Skillshop)</li>
+              <li><i class="fa-solid fa-check"></i> REST APIs &amp; Headless CMS (self-directed)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       CONTACT
+  ════════════════════════════════ -->
+  <section id="contact" class="section section--navy">
+    <div class="container">
+      <div class="sec-label sec-label--light reveal">Contact</div>
+      <h2 class="sec-title sec-title--light reveal" style="--d:.05s">Get In Touch</h2>
+      <p class="sec-sub sec-sub--light reveal" style="--d:.1s">Open to freelance projects and full-time roles. I reply within 24 hours.</p>
+
+      <div class="contact-layout">
+
+        <!-- Left info -->
+        <div class="contact-info reveal" style="--d:.12s">
+          <a href="mailto:dineshjayapriya5@gmail.com" class="ci-row">
+            <div class="ci-ic"><i class="fa-solid fa-envelope"></i></div>
+            <div><strong>Email</strong><span>dineshjayapriya5@gmail.com</span></div>
+          </a>
+          <a href="tel:+917339270572" class="ci-row">
+            <div class="ci-ic"><i class="fa-solid fa-phone"></i></div>
+            <div><strong>Phone</strong><span>+91 733 927 0572</span></div>
+          </a>
+          <a href="https://linkedin.com/in/dinesh-j-b9bbba2a6" target="_blank" rel="noopener" class="ci-row">
+            <div class="ci-ic"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div><strong>LinkedIn</strong><span>dinesh-j-b9bbba2a6</span></div>
+          </a>
+          <a href="https://github.com/DINESHJ02" target="_blank" rel="noopener" class="ci-row">
+            <div class="ci-ic"><i class="fa-brands fa-github"></i></div>
+            <div><strong>GitHub</strong><span>DINESHJ02</span></div>
+          </a>
+          <div class="ci-row">
+            <div class="ci-ic"><i class="fa-solid fa-location-dot"></i></div>
+            <div><strong>Location</strong><span>Chennai, India</span></div>
+          </div>
+        </div>
+
+        <!-- Right form -->
+        <form class="contact-form reveal" style="--d:.16s" id="cform" novalidate>
+          <div class="cf-row2">
+            <div class="cf-grp">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" placeholder="Your full name" autocomplete="name"/>
+              <span class="cf-err" id="e-name"></span>
+            </div>
+            <div class="cf-grp">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" placeholder="your@email.com" autocomplete="email"/>
+              <span class="cf-err" id="e-email"></span>
+            </div>
+          </div>
+          <div class="cf-grp">
+            <label for="f-sub">Subject</label>
+            <input type="text" id="f-sub" placeholder="Project inquiry, collaboration…"/>
+            <span class="cf-err" id="e-sub"></span>
+          </div>
+          <div class="cf-grp">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" rows="5" placeholder="Tell me about your project…"></textarea>
+            <span class="cf-err" id="e-msg"></span>
+          </div>
+          <button type="submit" class="btn-submit">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <div id="form-ok" class="form-ok hidden">
+            <i class="fa-solid fa-circle-check"></i> Sent! I'll reply within 24 hours.
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       FOOTER
+  ════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-wrap">
+      <div class="foot-left">
+        <a href="#home" class="brand brand--sm">
+          <div class="brand-mark brand-mark--dark">DJ</div>
+          <span>Dinesh J</span>
+        </a>
+        <p>Web Developer · Chennai, India</p>
+      </div>
+      <div class="foot-mid">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-right">
+        <a href="https://github.com/DINESHJ02"               target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/dinesh-j-b9bbba2a6" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:dineshjayapriya5@gmail.com"          aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Dinesh J. All rights reserved.</span>
+      <button id="totop">Back to top <i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
